@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock with Alarm</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div class="clock-container">
+        <div class="clock">
+            <img id="hour1" src="images/0.png" alt="0">
+            <img id="hour2" src="images/0.png" alt="0">
+            <img class="colon" src="images/colon.png" alt=":">
+            <img id="minute1" src="images/0.png" alt="0">
+            <img id="minute2" src="images/0.png" alt="0">
+            <img class="colon" src="images/colon.png" alt=":">
+            <img id="second1" src="images/0.png" alt="0">
+            <img id="second2" src="images/0.png" alt="0">
+        </div>
+        <p id="date">Loading date...</p>
+    </div>
+
+    <div class="alarm-container">
+        <div id="alarmOptions">
+            <input type="time" id="alarmTime" step="60">
+
+            <input type="file" id="alarmAudio" accept="audio/*">
+            <label>
+                <input type="checkbox" id="soundCheckbox" checked> Sound
+            </label>
+            <label>
+                <input type="checkbox" id="vibrateCheckbox" checked> Vibrate
+            </label>
+            <button id="setalarm" onclick="setAlarm()">Set Alarm</button>
+        </div>
+
+        <button id="clearAlarmButton" onclick="deleteAlarm()" style="display: none;">Clear Alarm</button>
+
+        <p id="alarmStatus">No alarm set.</p>
+        <audio id="alarmSound"></audio>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
